@@ -83,3 +83,34 @@ git 分布式版本控制系统
 			git tag -a tagname
 		给指定提交打标签：
 			git tag -a tagname commitID
+			
+	git@GitHub：
+		git生成秘钥：
+			$ ssh-keygen -t rsa -C "youremail@example.com"
+		GitHub接收公钥：
+			setting
+			title
+			key
+		验证是否连接成功：
+			$ ssh -T git@github.com
+			Hi bingxueguo! You've successfully authenticated, but GitHub does not provide shell access.
+			
+		添加远程仓库：
+			git remote add [shortname] [url]
+				
+			$ git remote add origin https://github.com/bingxueguo/git-github.git
+		
+		查看当前的远程库：
+			git remote
+			git remote -v
+		修改远程库：
+			git push [alias] [branch]
+		从远程库中pull资源到本地库：
+			1）git fetch [alias] [branch] 	git merge [alias] [branch]
+			
+			2）git pull
+			
+		删除远程仓库：
+			git remote rm [alias] (只是从本地断开了与远程的连接，远程库中的资源没有删)
+
+		
